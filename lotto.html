@@ -1,0 +1,32 @@
+<!doctype html>
+<head>
+	<title> javascript test </title>
+	<style >
+	input{font-size: 1em;}
+	body{font-size: 2em;}
+	button{font-size: 1em;}
+</style>
+</head>
+<body>
+	<h1 id = display>당신이 로또에 당첨 될 확률은?</h1>
+	일주일에 몇줄을 구매하십니까? <input tyoe="text" id="jang" placeholder="일주일 몇줄?">kg
+	
+	<br><button id="action">계산하기</button>
+	
+	<script type="text/javascript">
+		//변수와 함수
+		//variable and function
+		action.onclick = function(){
+			alert("Ok");
+			var myJang = jang.value;
+			lotto(myJang);
+		}
+	function lotto(weight){
+		var lotto = jang * 1 / 8145060
+		var year = 100 / lotto / 52.143
+		var money = 1000 * jang * year * 52.143		
+		var text = "당신의 로또1등 당첨 확률은" + lotto + " 입니다. 당첨이 되시려면" + year + "년을 생존하셔야합니다." + "총 투자 비용은" + money + "원 입니다.";
+		display.innerHTML = text;
+}
+	</script>
+</body>	
